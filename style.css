@@ -1,0 +1,110 @@
+:root {
+  --pri: #eae8fe;
+  --sec: #6327fe;
+  --white: #fff;
+}
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
+}
+
+/* layout */
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 386px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  width: 748px;
+  margin: 247px auto 0;
+}
+
+/* design */
+
+body {
+  background: var(--pri);
+}
+
+.main > section {
+  width: 360px;
+}
+
+.main__column--left {
+  padding: 31px 27px 28px;
+  background-color: var(--white);
+}
+
+.main__column--right {
+}
+
+.selectList {
+  display: grid;
+  grid-template-columns: repeat(3, 94px);
+  gap: 12px;
+}
+
+.selectList__element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.selectList__element.soldout {
+  position: relative;
+}
+
+.selectList__element.soldout::before {
+  content: url("images/sold-out.png");
+  position: absolute;
+}
+
+.selectList__element > img {
+  width: 36px;
+  margin: 11px 0 6px;
+}
+
+.selectList__element > label {
+  display: block;
+  height: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 13px;
+}
+
+.selectList__element > input {
+  padding: 5px 16px 5px 15px;
+  margin: 7px 0 9px;
+  background: var(--sec);
+  border: none;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  color: var(--white);
+}
+
+.select {
+  outline: 3px solid var(--sec);
+}
+
+.nonselect {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
