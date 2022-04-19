@@ -5,6 +5,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="modules_style.css">
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -50,8 +51,60 @@
                     <input id="orange" type="button" value="1000원" class="selectList--button">
                 </li>
             </ul>
+            <div class="txt--color-violet txt--color-small">
+                <span>잔액:</span>
+                <span>1,000원</span>
+            </div>
+            <button class="button--side">거스름돈 반환 </button>
+            <input class="input--money" type="text" placeholder="입금액 입력">
+            <button class="button--side">입금</button>
+                <ul class="colaContainer colaContainer--small">
+                    <li class="colaContainer__original">
+                        <span>Original_Cola</span>
+                        <button>1</button>
+                    </li>
+                    <li class="colaContainer__green">
+                        <span>Green_Cola</span>
+                        <button>2</button>
+                    </li>
+                    <li class="colaContainer__orange">
+                        <span>Orange_Cola</span>
+                        <button>1</button>
+                    </li>
+                    <li class="colaContainer__violet">
+                        <span> Violet_Cola</span>
+                        <button>5</button>
+                    </li>
+                </ul>
+            <button class="button--big">획득</button>
         </section>
-        <section class="main__column--right"></section>
+        <section class="main__column--right">
+            <div class="txt--color-violet">
+                <span>소지금:</span>
+                <span>25,000원</span>
+            </div>
+            <hr class="division">
+            <p class="getListTitle">획득한 음료</p>
+            <ul class="colaContainer">
+                <li class="colaContainer__original">
+                    <span>Original_Cola</span>
+                    <button>1</button>
+                </li>
+                <li class="colaContainer__green">
+                    <span>Green_Cola</span>
+                    <button>2</button>
+                </li>
+                <li class="colaContainer__orange">
+                    <span>Orange_Cola</span>
+                    <button>1</button>
+                </li>
+                <li class="colaContainer__violet">
+                    <span> Violet_Cola</span>
+                    <button>5</button>
+                </li>
+            </ul>
+            <p class="txt-total">총금액 : 9,000 원</p>
+        </section>
     </main>
 </body>
 </html>

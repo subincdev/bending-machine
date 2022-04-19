@@ -31,7 +31,8 @@
 .main {
   display: flex;
   justify-content: space-between;
-  width: 748px;
+  flex-wrap: wrap;
+  max-width: 748px;
   margin: 247px auto 0;
 }
 
@@ -42,21 +43,25 @@ body {
 }
 
 .main > section {
-  width: 360px;
+  max-width: 360px;
+  flex-grow: 1;
 }
 
 .main__column--left {
-  padding: 31px 27px 28px;
+  padding: 30px 27px;
   background-color: var(--white);
 }
 
 .main__column--right {
+  padding: 9px 27px;
+  background-color: var(--white);
 }
 
 .selectList {
   display: grid;
   grid-template-columns: repeat(3, 94px);
   gap: 12px;
+  margin-bottom: 20px;
 }
 
 .selectList__element {
@@ -107,4 +112,87 @@ body {
 
 .nonselect {
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.input--money {
+  padding: 0 0 6px 5px;
+  width: 200px;
+  background: #ffffff;
+  border: 1px solid #bdbdbd;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.input--money::placeholder {
+  color: #bdbdbd;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.txt--color-small {
+  float: left;
+  width: 200px;
+  margin-bottom: 11px;
+}
+
+.colaContainer--small {
+  margin-top: 12px;
+  width: 200px;
+  height: 106px;
+  overflow-y: scroll;
+  float: left;
+}
+
+.button--big {
+  float: right;
+  width: 94px;
+  height: 106px;
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  color: #ffffff;
+  background: #6327fe;
+  border: none;
+  border-radius: 5px;
+}
+
+.division {
+  margin-right: -27px;
+  margin-left: -27px;
+  height: 20px;
+  background-color: var(--pri);
+  border: none;
+}
+
+.getListTitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  margin: 25px 0 13px;
+}
+
+.txt-total {
+  float: right;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17px;
+  margin-top: 6px;
+}
+
+/* 모바일 반응형 */
+
+@media screen and (max-width: 360px) {
+  body {
+    background: var(--white);
+  }
+  .main {
+    align-content: center;
+  }
+  .division {
+    display: none;
+  }
 }
