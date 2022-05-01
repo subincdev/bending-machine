@@ -45,6 +45,7 @@ button {
 
 body {
   background-color: var(--pri);
+  margin: 0 auto;
 }
 
 .main > section {
@@ -188,9 +189,9 @@ body {
   margin-top: 6px;
 }
 
-/* 모바일 반응형 */
+/* 태블릿, 아이패드 */
 
-@media screen and (min-width: 360px) and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   body {
     width: 360px;
     background-color: var(--white);
