@@ -209,4 +209,7 @@ body {
   .getListTitle {
     margin-top: 41px;
   }
+  .txt-total {
+    margin-bottom: 41px;
+  }
 }
