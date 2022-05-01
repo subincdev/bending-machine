@@ -9,6 +9,11 @@
   box-sizing: border-box;
 }
 
+input,
+button {
+  cursor: pointer;
+}
+
 /* layout */
 
 .hidden {
@@ -20,8 +25,7 @@
 }
 
 .header {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 .logo {
@@ -33,13 +37,14 @@
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 748px;
+  min-width: 360px;
   margin: 247px auto 0;
 }
 
 /* design */
 
 body {
-  background: var(--pri);
+  background-color: var(--pri);
 }
 
 .main > section {
@@ -65,10 +70,9 @@ body {
 }
 
 .selectList__element {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .selectList__element.soldout {
@@ -78,6 +82,7 @@ body {
 .selectList__element.soldout::before {
   content: url("images/sold-out.png");
   position: absolute;
+  left: 0;
 }
 
 .selectList__element > img {
@@ -187,12 +192,20 @@ body {
 
 @media screen and (max-width: 360px) {
   body {
-    background: var(--white);
+    width: 360px;
+    background-color: var(--white);
+  }
+  .logo {
+    width: 166px;
   }
   .main {
-    align-content: center;
+    margin-top: 0;
   }
+
   .division {
     display: none;
+  }
+  .getListTitle {
+    margin-top: 41px;
   }
 }
